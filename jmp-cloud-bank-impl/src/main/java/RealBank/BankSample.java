@@ -1,7 +1,5 @@
 package RealBank;
 
-import java.util.Random;
-
 import bankInterface.Bank;
 import userBankCardSubscription.BankCard;
 import userBankCardSubscription.CreditBankCard;
