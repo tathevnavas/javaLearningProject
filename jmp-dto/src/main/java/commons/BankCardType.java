@@ -1,4 +1,4 @@
-package utils;
+package commons;
 
 public enum BankCardType {
     CREDIT,

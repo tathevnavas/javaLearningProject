@@ -1,7 +1,6 @@
 package realService;
 
 import java.util.List;
-import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import serviceInterface.Service;
@@ -17,10 +16,11 @@ public class ServiceSample implements Service {
 
     @Override
     public Optional<Subscription> getSubscriptionByBankCardNumber(String cardNumber) {
-        return Optional.ofNullable(Subscription.getSubscriptions()
+        return Subscription.getSubscriptions()
             .stream()
             .filter(s -> s.getBankcardNumber().equals(cardNumber))
-            .findFirst().orElseThrow(NoSuchElementException::new));
+            .findFirst();
+            //.findFirst().orElseThrow(NoSuchElementException::new));
     }
 
     @Override
